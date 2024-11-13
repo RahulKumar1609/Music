@@ -71,7 +71,7 @@ const playMusic=(track,pause=false)=>{
     
 }
 async function displayAlbums() {
-    let a=await fetch(`http://127.0.0.1:5500/songs/`)
+    let a=await fetch(`../songs/`)
     let response=await a.text();
     let div=document.createElement("div")
     div.innerHTML=response;
@@ -81,7 +81,7 @@ async function displayAlbums() {
     for(let index=0;index<array.length;index++){
         const e=array[index];
 
-        if(e.href.includes("http://127.0.0.1:5500/songs/")){
+        if(e.href.includes("../songs/")){
             let folder=e.href.split("/songs/").slice(-1)[0]
              // Get the meta data of the folder
             let a=await fetch(`/songs/${folder}/info.json`)
