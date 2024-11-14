@@ -111,7 +111,7 @@ async function displayAlbums() {
 }
 
 async function main() {
-    await getsongs("https://github.com/RahulKumar1609/Music/songs/ncs")
+    await getsongs("../songs/ncs")
     playMusic(songs[0],true)
 
  
